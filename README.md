@@ -25,25 +25,27 @@ The Super Resolution Web App consists of two main components:
 ## Project Structure
 
 super_resolution_app/
-│
-├── backend/
-│   ├── app.py               # Flask backend code
-│   ├── RRDBNet_arch.py      # RRDBNet architecture implementation
-│   ├── models/              # Folder for storing model files
-│   ├── uploads/             # Folder for storing uploaded images
-│   └── results/             # Folder for storing super-resolved images
-│
-├── frontend/
-│   ├── frontend.py          # Streamlit frontend code
-│   └── index.html           # HTML template for Streamlit frontend
-│
-├── models/                  # Directory for pre-trained model files
-│   ├── RRDB_ESRGAN_x4.pth
-│   └── RRDB_PSNR_x4.pth
-│
-├── requirements.txt         # List of Python dependencies
-│
-└── .gitignore               # Git ignore file
+|
+|-- backend/                    # Backend code for image super-resolution
+|   |-- app.py                  # Flask backend code
+|   |-- models/                 # Folder for storing model files
+|   |   |-- RRDB_ESRGAN_x4.pth # Pre-trained model for ESRGAN
+|   |   |-- RRDB_PSNR_x4.pth   # Pre-trained model for PSNR
+|   |-- uploads/                # Folder for storing uploaded images
+|   |-- results/                # Folder for storing super-resolved images
+|   |-- RRDBNet_arch.py         # Definition of the RRDBNet architecture
+|
+|-- frontend/                   # Frontend interface for the web application
+|   |-- frontend.py             # Streamlit frontend code
+|   |-- index.html              # HTML template for Streamlit frontend
+|
+|-- models/                     # Directory for pre-trained model files
+|   |-- RRDB_ESRGAN_x4.pth     # Pre-trained model for ESRGAN
+|   |-- RRDB_PSNR_x4.pth       # Pre-trained model for PSNR
+|
+|-- requirements.txt            # List of Python dependencies
+|
+|-- .gitignore                  # Git ignore file
 
 ## Dependencies
 
