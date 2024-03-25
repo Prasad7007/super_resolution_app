@@ -24,29 +24,27 @@ The Super Resolution Web App consists of two main components:
 
 ## Project Structure
 
-super_resolution_app/
-|
-|-- backend/                    # Backend code for image super-resolution
-|   |-- app.py                  # Flask backend code
-|   |-- models/                 # Folder for storing model files
-|   |   |-- RRDB_ESRGAN_x4.pth # Pre-trained model for ESRGAN
-|   |   |-- RRDB_PSNR_x4.pth   # Pre-trained model for PSNR
-|   |-- uploads/                # Folder for storing uploaded images
-|   |-- results/                # Folder for storing super-resolved images
-|   |-- RRDBNet_arch.py         # Definition of the RRDBNet architecture
-|
-|-- frontend/                   # Frontend interface for the web application
-|   |-- frontend.py             # Streamlit frontend code
-|   |-- index.html              # HTML template for Streamlit frontend
-|
-|-- models/                     # Directory for pre-trained model files
-|   |-- RRDB_ESRGAN_x4.pth     # Pre-trained model for ESRGAN
-|   |-- RRDB_PSNR_x4.pth       # Pre-trained model for PSNR
-|
-|-- requirements.txt            # List of Python dependencies
-|
-|-- .gitignore                  # Git ignore file
+1. **backend/**: This directory contains the backend code responsible for image super-resolution.
+   - **app.py**: This file contains the Flask backend code.
+   - **models/**: This folder stores pre-trained model files used for super-resolution.
+     - **RRDB_ESRGAN_x4.pth**: Pre-trained model for ESRGAN.
+     - **RRDB_PSNR_x4.pth**: Pre-trained model for PSNR.
+   - **uploads/**: Folder for storing uploaded images.
+   - **results/**: Folder for storing super-resolved images.
+   - **RRDBNet_arch.py**: Definition of the RRDBNet architecture used in the models.
 
+2. **frontend/**: This directory contains the frontend interface for the web application.
+   - **frontend.py**: Streamlit frontend code.
+   - **index.html**: HTML template for Streamlit frontend.
+
+3. **models/**: This directory holds pre-trained model files.
+   - **RRDB_ESRGAN_x4.pth**: Pre-trained model for ESRGAN.
+   - **RRDB_PSNR_x4.pth**: Pre-trained model for PSNR.
+
+4. **requirements.txt**: This file lists all the Python dependencies required to run the project.
+
+5. **.gitignore**: Git ignore file to specify which files and directories to ignore when pushing to a Git repository.
+   
 ## Dependencies
 
 - Flask
