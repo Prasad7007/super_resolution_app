@@ -1,0 +1,16 @@
+*.pyc
+__pycache__/
+venv/
+*.pyo
+*.pyc
+
+.streamlit/
+
+backend/uploads/
+backend/results/
+
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db
