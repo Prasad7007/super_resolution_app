@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Resolution Web App</title>
+</head>
+<body>
+    <h1>Super Resolution Web App</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="file" id="fileInput">
+        <input type="submit" value="Upload Image" id="uploadButton">
+    </form>
+    <div id="resultContainer"></div>
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'http://localhost:5000/upload', true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    var resultUrl = 'http://localhost:5000/results/' + xhr.responseText;
+                    var resultImage = document.createElement('img');
+                    resultImage.src = resultUrl;
+                    document.getElementById('resultContainer').innerHTML = '';
+                    document.getElementById('resultContainer').appendChild(resultImage);
+                } else {
+                    console.error('Error:', xhr.statusText);
+                }
+            };
+            xhr.send(formData);
+        });
+    </script>
+</body>
+</html>

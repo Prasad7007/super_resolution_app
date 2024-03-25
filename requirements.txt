@@ -1,0 +1,5 @@
+flask
+streamlit
+opencv-python-headless
+numpy
+torch>=1.8.0
